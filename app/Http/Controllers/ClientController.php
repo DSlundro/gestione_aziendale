@@ -38,7 +38,6 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
         $validated = $request->validate([
             'client'    =>  'required',
             'address'   =>  'required',
@@ -75,7 +74,8 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        //
+        $client = Client::find($id);
+        return view('clients.edit', compact('client'));
     }
 
     /**
@@ -87,6 +87,21 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $client = Client::find($id);
+
+        $validated = $request->validate([
+            'client'    =>  'required',
+            'address'   =>  'required',
+            'number'    =>  'required',
+            'city'      =>  'required',
+            'province'  =>  'required',
+            'cap'       =>  'required',
+            'p_iva'     =>  'nullable',
+            'reference' =>  'nullable',
+            'contact'   =>  'nullable'
+        ]);
+
+        $client->update($validated);
+        return redirect('clients')->with('status', 'Cliente modificato con successo!');
     }
 }
