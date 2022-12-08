@@ -15,6 +15,6 @@ Route::get('/dashboard', function () {
 /* CLIENTS */
 Route::resource('/clients', ClientController::class, [
     'except' => ['destroy']
-]);
+])->middleware('auth');
 
 require __DIR__.'/auth.php';
