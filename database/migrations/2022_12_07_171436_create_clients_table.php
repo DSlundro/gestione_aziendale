@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('client');
             $table->string('address');
+            $table->string('number');
             $table->string('city');
             $table->string('province');
             $table->string('cap');

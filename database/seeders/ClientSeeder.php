@@ -19,6 +19,7 @@ class ClientSeeder extends Seeder
             $client = new Client();
             $client->client = 'Nome Cliente'.$i;
             $client->address = 'Indirizzo'.$i;
+            $client->number = rand(1, 22);
             $client->city = 'Città'.$i;
             $client->province = 'Gorizia';
             $client->cap = 'GO';

@@ -42,6 +42,7 @@ class ClientController extends Controller
         $validated = $request->validate([
             'client'    =>  'required',
             'address'   =>  'required',
+            'number'    =>  'required',
             'city'      =>  'required',
             'province'  =>  'required',
             'cap'       =>  'required',
