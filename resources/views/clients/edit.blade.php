@@ -5,7 +5,7 @@
 <section class="form-section">
     <div class="form-container">
         {{-- TITLE --}}
-        <x-form.title-form :text="'Aggiungi nuovo cliente'" />
+        <x-form.title-form :text="'Modifica il cliente'" />
 
         {{-- FORM --}}
         <form
