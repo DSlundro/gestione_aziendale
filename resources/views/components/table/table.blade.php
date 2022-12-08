@@ -41,14 +41,18 @@
                     />
                     <td>
                         {{-- SHOW --}}
-                        <x-buttons.show-button 
-                            :route="'clients.show'" 
+                        <x-buttons.link-button 
+                            :route="__('clients.show')" 
                             :id='$client->id'
+                            :text="__('Dettagli')"
+                            :class="__('_primary-button')"
                         />
                         {{-- EDIT --}}
-                        <x-buttons.edit-button 
-                            :route="'clients.edit'" 
-                            :id='$client->id' 
+                        <x-buttons.link-button 
+                            :route="__('clients.edit')" 
+                            :id="$client->id"
+                            :text="__('Modifica')"
+                            :class="__('_secondary-button')"
                         />
                     </td>
                 </tr>

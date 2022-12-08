@@ -83,7 +83,7 @@
             </div>
 
             {{-- BUTTON --}}
-            <x-buttons.submit-button :text="'Aggiungi'"/>
+            <x-buttons.primary-button :text="'Aggiungi'" :class="'my-6'"/>
 
         </form>
     </div>

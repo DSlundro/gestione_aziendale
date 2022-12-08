@@ -1,22 +1,32 @@
 @layer components {
     ._button {
-        @apply py-[5px] px-3 rounded-md font-bold text-white
-        transition-all duration-[250ms] ease-in-out;
-    }
-    
-    .show {
-        @apply _button bg-green-400 hover:bg-green-500;
-    }
-    
-    .edit {
-        @apply _button bg-blue-400 hover:bg-blue-500;
-    }
-    
-    .delete {
-        @apply _button bg-red-400 hover:bg-red-500;
+        @apply inline-flex items-center px-4 py-2 
+        font-semibold text-xs uppercase tracking-widest
+        border border-transparent rounded-md 
+        focus:outline-none focus:ring-2 focus:ring-offset-2 
+        transition ease-in-out duration-150;
     }
 
-    ._submit {
-        @apply show my-6 py-3 px-6;
+    ._primary-button {
+        @apply 
+        _button
+        text-white
+        bg-green-500  
+        hover:bg-green-400 
+        focus:bg-green-400 
+        active:bg-green-600  
+        focus:ring-green-200;
     }
+    
+    ._secondary-button {
+        @apply 
+        _button 
+        text-white
+        bg-blue-500  
+        hover:bg-blue-400 
+        focus:bg-blue-400 
+        active:bg-blue-600  
+        focus:ring-blue-200;
+    }
+    
 }
