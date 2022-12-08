@@ -38,7 +38,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-
+        //dd($request->all());
         $validated = $request->validate([
             'client'    =>  'required',
             'address'   =>  'required',
@@ -51,7 +51,7 @@ class ClientController extends Controller
         ]);
 
         Client::create($validated);
-        return redirect()->with('status', 'Cliente aggiunto con successo!');
+        return redirect('clients')->with('status', 'Cliente aggiunto con successo!');
     }
 
     /**

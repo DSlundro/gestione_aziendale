@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('province');
             $table->string('cap');
             $table->bigInteger('p_iva')->nullable();
-            $table->string('reference');
-            $table->string('contact');
+            $table->string('reference')->nullable();
+            $table->string('contact')->nullable();
             $table->timestamps();
         });
     }
