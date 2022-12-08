@@ -1,3 +1,8 @@
+@import './_table.css';
+@import './_buttons.css';
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+

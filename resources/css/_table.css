@@ -1,0 +1,30 @@
+@layer components {
+    ._container {
+        @apply max-w-[1600px] mx-auto sm:px-1 lg:px-8;
+    }
+    ._table-container {
+        @apply bg-white overflow-hidden shadow-sm sm:rounded-lg;
+    }
+    ._table {
+        @apply w-full text-sm text-center;
+    }
+    ._table-thead {
+        @apply text-xs uppercase bg-blue-100;
+    }
+    ._table-thead th {
+        @apply py-3 border-b;
+    }
+    ._table-tbody {
+        @apply border-b;
+    }
+    ._table-tbody td {
+        @apply py-3 px-3;
+    }
+    ._table-tbody:nth-child(even) {
+        @apply bg-slate-50;
+    }
+    ._table-tbody td:last-child,
+    ._table-thead th:last-child{
+        @apply flex justify-center items-center gap-x-1;
+    }
+}

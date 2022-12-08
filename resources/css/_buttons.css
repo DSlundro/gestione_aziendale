@@ -1,0 +1,17 @@
+@layer components {
+    ._button {
+        @apply py-1 px-3 rounded-md font-bold text-gray-100;
+    }
+
+    .show {
+        @apply _button bg-green-400;
+    }
+
+    .edit {
+        @apply _button bg-blue-400;
+    }
+
+    .delete {
+        @apply _button bg-red-400;
+    }
+}
