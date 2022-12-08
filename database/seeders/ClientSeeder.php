@@ -22,7 +22,7 @@ class ClientSeeder extends Seeder
             $client->number = rand(1, 22);
             $client->city = 'Città'.$i;
             $client->province = 'Gorizia';
-            $client->cap = 'GO';
+            $client->cap = rand(11111, 99999);
             $client->p_iva = 1234567890 . $i;
             $client->reference = 'Nome Referente'.$i;
             $client->contact = 123456789 . $i;
