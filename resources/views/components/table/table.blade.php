@@ -30,7 +30,7 @@
                         :data="[
                             $client->id,
                             $client->client,
-                            $client->address,
+                            $client->address . ', ' . $client->number,
                             $client->city,
                             $client->province,
                             $client->cap,

@@ -1,1 +1,1 @@
-<h2 class="form_title">{{ $text }}</h2>
+<h2 class="form-title">{{ $text }}</h2>

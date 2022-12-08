@@ -3,7 +3,7 @@
         @apply max-w-[1600px] mx-auto sm:px-1 lg:px-8;
     }
     ._table-container {
-        @apply bg-white overflow-hidden shadow-sm sm:rounded-lg;
+        @apply bg-white overflow-hidden shadow-xl sm:rounded-lg;
     }
     ._table {
         @apply w-full text-sm text-center;

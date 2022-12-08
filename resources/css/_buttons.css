@@ -1,17 +1,22 @@
 @layer components {
     ._button {
-        @apply py-1 px-3 rounded-md font-bold text-gray-100;
+        @apply py-[5px] px-3 rounded-md font-bold text-white
+        transition-all duration-[250ms] ease-in-out;
     }
-
+    
     .show {
-        @apply _button bg-green-400;
+        @apply _button bg-green-400 hover:bg-green-500;
     }
-
+    
     .edit {
-        @apply _button bg-blue-400;
+        @apply _button bg-blue-400 hover:bg-blue-500;
+    }
+    
+    .delete {
+        @apply _button bg-red-400 hover:bg-red-500;
     }
 
-    .delete {
-        @apply _button bg-red-400;
+    ._submit {
+        @apply show my-6 py-3 px-6;
     }
 }

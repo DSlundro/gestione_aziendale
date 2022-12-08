@@ -1,5 +1,5 @@
 <div>
     <a href="{{ route($route, $id) }}" class="show">
-        Mostra
+        Dettagli
     </a>
 </div>

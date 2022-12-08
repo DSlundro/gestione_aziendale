@@ -1,9 +1,21 @@
 @layer components {
-    .form_title {
+    .form-section {
+        @apply flex justify-center;
+    }
+    .form-container {
+        @apply bg-white my-12 rounded-xl px-14 py-4 shadow-xl;
+    }
+    .form-title {
         @apply text-2xl text-center py-5 font-bold;
     }
     .form {
         @apply w-[500px] m-auto;
+    }
+    .form > div {
+        @apply py-1;
+    }
+    .form ._group-input {
+        @apply flex gap-2;
     }
     .input {
         @apply bg-gray-50 border border-gray-300 
