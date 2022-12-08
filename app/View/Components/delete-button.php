@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class delete-button extends Component
+class delete_button extends Component
 {
     /**
      * Create a new component instance.

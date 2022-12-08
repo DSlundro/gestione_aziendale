@@ -38,6 +38,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
+
         $validated = $request->validate([
             'client'    =>  'required',
             'address'   =>  'required',

@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class edit_button extends Component
+class message_error extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class edit_button extends Component
      */
     public function render()
     {
-        return view('components.edit-button');
+        return view('components.message-error');
     }
 }

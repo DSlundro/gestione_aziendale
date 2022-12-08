@@ -1,29 +1,34 @@
 
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
 
-<h2 class="form_title">Add new comic</h2>
-<form 
-    class="form" 
-    action="{{ route('clients.index') }}"
-    method="POST">
-    @csrf
+<x-form.title-form :text="'Aggiungi nuovo cliente'" />
+<form
+    action="{{ route('clients.store') }}"
+    method='POST'
+    class="form"
+>
+@csrf 
 
-    {{-- TITLE --}}
-    @include('comics.partials.form.title')
+    <div class="mb-6">
+        <x-form.label
+            :for="'client'" 
+            :text="'Cliente'"
+        />
+        <x-form.input 
+            :type="'text'" 
+            :name="'client'" 
+            :value="'$client->client'"
+        />
+        <x-message.error-message 
+            :name="'client'" 
+            :text="'Cliente'"
+        />
+    </div>
 
-    {{-- SERIE --}}
-    @include('comics.partials.form.serie')
+    <button type="submit">Crea</button>
 
-    {{-- COVER --}}
-    @include('comics.partials.form.photo')
-
-    {{-- DESCRIPTION --}}
-    @include('comics.partials.form.description')
-
-    {{-- SUBMIT BUTTON --}}
-    @include('comics.partials.form.submitButton')
 </form>
 
 @endsection

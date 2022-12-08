@@ -1,0 +1,1 @@
+<h2 class="form_title">{{ $text }}</h2>

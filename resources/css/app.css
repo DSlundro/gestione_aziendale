@@ -1,5 +1,6 @@
 @import './_table.css';
 @import './_buttons.css';
+@import './_form.css';
 
 
 @tailwind base;
