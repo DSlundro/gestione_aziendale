@@ -11,6 +11,7 @@ class Client extends Model
 
     protected $fillable = [
         'client',
+        'client_type_id',
         'address',
         'number',
         'city',
@@ -20,4 +21,9 @@ class Client extends Model
         'reference',
         'contact'
     ];
+
+    public function client_type()
+    {
+        return $this->belongsTo(ClientType::class);
+    }
 }

@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Client;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ClientSeeder extends Seeder
@@ -18,6 +17,7 @@ class ClientSeeder extends Seeder
         for ($i=0; $i <= 20; $i++) { 
             $client = new Client();
             $client->client = 'Nome Cliente'.$i;
+            $client->client_type_id = rand(1, 2);
             $client->address = 'Indirizzo'.$i;
             $client->number = rand(1, 22);
             $client->city = 'Città'.$i;
