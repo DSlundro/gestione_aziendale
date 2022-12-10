@@ -3,7 +3,7 @@
         @apply inline-flex items-center px-4 py-2 
         font-semibold text-xs uppercase tracking-widest
         border border-transparent rounded-md 
-        focus:outline-none focus:ring-2 focus:ring-offset-2 
+        focus:outline-none  
         transition ease-in-out duration-150;
     }
 
@@ -27,6 +27,16 @@
         focus:bg-blue-400 
         active:bg-blue-600  
         focus:ring-blue-200;
+    }
+
+    ._welcome-button {
+        @apply 
+        _button 
+        text-sm leading-4 font-medium 
+        rounded-md 
+        text-gray-500 
+        bg-white 
+        hover:text-gray-700 ;
     }
     
 }

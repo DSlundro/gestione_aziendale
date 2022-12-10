@@ -7,3 +7,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    ._welcome {
+        background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/bg.jpg');
+        @apply relative flex justify-center min-h-screen py-4
+        bg-gray-100 bg-center bg-cover 
+        ;
+    }
+
+}
