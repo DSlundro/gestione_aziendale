@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => "L'account non esiste.",
+    'failed' => "I dati inseriti non sono corretti.",
     'password' => 'La password inserita non è corretta.',
     'throttle' => 'Troppi tentativi. Riprova fra :seconds secondi.',
 
