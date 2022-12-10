@@ -26,9 +26,9 @@
             {{-- PASSWORD --}}
             <div class="mt-4">
                 <x-form.label :text="__('Password')" :for="__('password')" />
-                <x-form.input :type="__('password')" :name="__('password')" :oldValue="__('password')"
+                <x-form.input :type="__('password')" :name="__('password')" :oldValue="__('')"
                     required autocomplete="current-password" />
-                <x-form.input-error :messages="$errors->get('password')" class="mt-2" />
+                <x-form.input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
             <!-- Remember Me -->
