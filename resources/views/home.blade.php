@@ -9,7 +9,7 @@
             </a>
         </div>
         @auth
-            <p class="pt-6">Consulta la dashboard</p>
+            <p class="pt-6 font-bold text-xl">Consulta la dashboard</p>
             <div class="flex justify-center mt-12">
                 <x-buttons.link-button 
                     :class="__('_primary-button')"
