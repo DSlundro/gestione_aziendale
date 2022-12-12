@@ -41,6 +41,7 @@
                             </option>
                         @endforeach
                     </select>
+                    <x-message.error-message :name="'client_type_it'" :text="'Tipo Cliente'" />
                 </div>
             </div>
 
