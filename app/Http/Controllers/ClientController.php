@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\ClientType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 
@@ -27,7 +28,8 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('clients.create');
+        $types = ClientType::all();
+        return view('clients.create', compact('types'));
     }
 
     /**
@@ -39,15 +41,16 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'client'    =>  'required',
-            'address'   =>  'required',
-            'number'    =>  'required',
-            'city'      =>  'required',
-            'province'  =>  'required',
-            'cap'       =>  'required',
-            'p_iva'     =>  'nullable',
-            'reference' =>  'nullable',
-            'contact'   =>  'nullable'
+            'client'            =>  'required',
+            'client_type_id'    =>  'required',
+            'address'           =>  'required',
+            'number'            =>  'required',
+            'city'              =>  'required',
+            'province'          =>  'required',
+            'cap'               =>  'required',
+            'p_iva'             =>  'nullable',
+            'reference'         =>  'nullable',
+            'contact'           =>  'nullable',
         ]);
 
         Client::create($validated);
@@ -75,7 +78,8 @@ class ClientController extends Controller
     public function edit($id)
     {
         $client = Client::find($id);
-        return view('clients.edit', compact('client'));
+        $types = ClientType::all();
+        return view('clients.edit', compact('client', 'types'));
     }
 
     /**
@@ -90,15 +94,16 @@ class ClientController extends Controller
         $client = Client::find($id);
 
         $validated = $request->validate([
-            'client'    =>  'required',
-            'address'   =>  'required',
-            'number'    =>  'required',
-            'city'      =>  'required',
-            'province'  =>  'required',
-            'cap'       =>  'required',
-            'p_iva'     =>  'nullable',
-            'reference' =>  'nullable',
-            'contact'   =>  'nullable'
+            'client'            =>  'required',
+            'client_type_id'    =>  'required',
+            'address'           =>  'required',
+            'number'            =>  'required',
+            'city'              =>  'required',
+            'province'          =>  'required',
+            'cap'               =>  'required',
+            'p_iva'             =>  'nullable',
+            'reference'         =>  'nullable',
+            'contact'           =>  'nullable',
         ]);
 
         $client->update($validated);
