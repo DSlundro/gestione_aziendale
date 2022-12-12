@@ -14,12 +14,26 @@
             class="form"
         >
         @csrf 
+            <div class="_group-input">
+                {{-- CLIENT --}}
+                <div class="w-full">
+                    <x-form.label :for="'client'" :text="'Cliente'" />
+                    <x-form.input :type="'text'" :name="'client'" :oldValue="'client'"/>
+                    <x-message.error-message :name="'client'" :text="'Cliente'" />
+                </div>
 
-            {{-- CLIENT --}}
-            <div>
-                <x-form.label :for="'client'" :text="'Cliente'" />
-                <x-form.input :type="'text'" :name="'client'" :oldValue="'client'"/>
-                <x-message.error-message :name="'client'" :text="'Cliente'" />
+                {{-- CLIENT TYPE --}}
+                <div>
+                    <x-form.label :for="'client_type'" :text="'Cliente'" />
+                    <select name="client_type_id" class="input w-[133px]">
+                        <option value="" selected disabled></option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}" class="input">
+                                {{ $type->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
 
             <div class="_group-input">

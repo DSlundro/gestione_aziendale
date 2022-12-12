@@ -16,11 +16,32 @@
         @method('PUT')
         @csrf
 
-            {{-- CLIENT --}}
-            <div>
-                <x-form.label :for="'client'" :text="'Cliente'" />
-                <x-form.input :type="'text'" :name="'client'" :value="$client->client"/>
-                <x-message.error-message :name="'client'" :text="'Cliente'" />
+            <div class="_group-input">
+                {{-- CLIENT --}}
+                <div class="w-full">
+                    <x-form.label :for="'client'" :text="'Cliente'" />
+                    <x-form.input :type="'text'" :name="'client'" :value="$client->client"/>
+                    <x-message.error-message :name="'client'" :text="'Cliente'" />
+                </div>
+
+                {{-- CLIENT TYPE --}}
+                <div>
+                    <x-form.label :for="'client_type'" :text="'Cliente'" />
+                    <select name="client_type_id" class="input w-[133px]">
+                        <option value="" disabled></option>
+                        @foreach ($types as $type)
+                            <option 
+                                value="{{ $type->id }}" 
+                                class="input"
+                                @if (isset($client->client_type_id) && $type->id == $client->client_type_id)
+                                    selected
+                                @endif
+                            >
+                                {{ $type->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
 
             <div class="_group-input">
