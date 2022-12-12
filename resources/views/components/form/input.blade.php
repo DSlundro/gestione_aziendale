@@ -1,6 +1,6 @@
 <input
     type="{{ $type }}"
     name="{{ $name }}" 
-    value="{{ $value ?? old($oldValue) }}" 
+    value="{{ $value ?? old(isset($oldValue)) }}" 
     class="input" 
 >
